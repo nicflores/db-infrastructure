@@ -2,8 +2,8 @@ FROM java:8u111-jre
 
 COPY bin/wrapper_script.sh wrapper_script.sh
 
-ARG SPARK_VERSION
-ARG SCALA_VERSION
+ARG SPARK_VERSION="2.2.0"
+ARG SCALA_VERSION="2.11.11"
 
 RUN curl -L http://www-us.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop2.7.tgz | tar -xz -C /opt/
 RUN curl -L https://downloads.lightbend.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.tgz | tar -xz -C /opt
