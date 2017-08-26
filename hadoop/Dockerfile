@@ -1,7 +1,7 @@
 FROM java:8u111-jre
 
 COPY bin/wrapper_script.sh wrapper_script.sh
-ARG HADOOP_VERSION
+ARG HADOOP_VERSION="2.7.3"
 
 RUN apt-get update && \
     apt-get -y install ssh
